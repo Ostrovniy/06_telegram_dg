@@ -13,7 +13,8 @@ from aiogram.types import Message
 from dotenv import load_dotenv
 load_dotenv()
 
-TOKEN = os.getenv("BOT_TOKEN")
+
+TOKEN = os.getenv("BOT_TOKEN", "").strip('"')  # Удаляем возможные кавычки из за railway
 
 if not TOKEN:
     raise ValueError("BOT_TOKEN is not set or is empty!")
