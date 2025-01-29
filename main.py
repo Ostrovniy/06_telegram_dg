@@ -15,6 +15,9 @@ load_dotenv()
 
 TOKEN = os.getenv("BOT_TOKEN")
 
+if not TOKEN:
+    raise ValueError("BOT_TOKEN is not set or is empty!")
+
 # All handlers should be attached to the Router (or Dispatcher)
 
 dp = Dispatcher()
