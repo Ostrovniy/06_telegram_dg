@@ -25,7 +25,7 @@ dp = Dispatcher()
 
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
-    await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!, Накрывай столы!!!228")
+    await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!, Добро пожаловать")
 
 
 @dp.message()
